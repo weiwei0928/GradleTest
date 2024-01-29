@@ -1,0 +1,55 @@
+apply plugin: 'kotlin'
+apply plugin: 'java-gradle-plugin'
+
+def prefix = "weiwei :"
+
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        // 因为使用的 Kotlin 需要需要添加 Kotlin 插件
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.10"
+    }
+}
+
+repositories {
+    google()
+    mavenCentral()
+}
+/**
+ * 不需要手动创建resource即META-INF目录下的properties等等 。其实并不是我们没有创建，
+ * 而是我们使用的 java-gradle-plugin 插件会自动创建，并且以 api 的方式引入 gradleApi() ，
+ * 会自动帮我们将上述的步骤实现。在build目录下可以查到。
+ */
+
+//本地依赖插件时使用
+gradlePlugin {
+    plugins {
+        //插件名,每一个插件都可以有
+        routerPlugin {
+            id = 'com.ww.gradle.buildSrc'
+            implementationClass = 'com.ww.gradle.BuildSrcGradlePlugin'
+        }
+        //第二个插件
+//        test2Plugin {
+//            id = xxx
+//            implementationClass = xxx
+//        }
+    }
+}
+//循环每个build.gradle来构建task依赖关系图
+this.gradle.beforeProject {
+    Project project ->
+        println(prefix + "beforeProject Project name = " + project.name)
+}
+
+this.gradle.afterProject {
+    Project project ->
+        println(prefix + "afterProject Project name  = " + project.name)
+}
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.10"
+}
+

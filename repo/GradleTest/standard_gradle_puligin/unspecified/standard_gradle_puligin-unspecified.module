@@ -1,0 +1,82 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "GradleTest",
+    "module": "standard_gradle_puligin",
+    "version": "unspecified",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.3.3"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.7.10"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "standard_gradle_puligin-unspecified.jar",
+          "url": "standard_gradle_puligin-unspecified.jar",
+          "size": 4453,
+          "sha512": "e09d3311e919895631b06e98c0c2a700b3da26874f5e3d7d35a9ac677f608b5c47569d324a98cb6633ece297a3f58fd14a2ac5bce8fc87754a40fcf84f617448",
+          "sha256": "0c3d16fc62a930a74ac78542c06fc4ac2d01389777ab31cc9b43b01d7c5737f6",
+          "sha1": "1465e12c061038de8141c760cb39132180272025",
+          "md5": "5e0efd1cd22fa71338330144dedfff51"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.7.10"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "standard_gradle_puligin-unspecified.jar",
+          "url": "standard_gradle_puligin-unspecified.jar",
+          "size": 4453,
+          "sha512": "e09d3311e919895631b06e98c0c2a700b3da26874f5e3d7d35a9ac677f608b5c47569d324a98cb6633ece297a3f58fd14a2ac5bce8fc87754a40fcf84f617448",
+          "sha256": "0c3d16fc62a930a74ac78542c06fc4ac2d01389777ab31cc9b43b01d7c5737f6",
+          "sha1": "1465e12c061038de8141c760cb39132180272025",
+          "md5": "5e0efd1cd22fa71338330144dedfff51"
+        }
+      ]
+    }
+  ]
+}

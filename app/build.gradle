@@ -8,6 +8,9 @@ class BuildGradle implements Plugin<Project> {
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'com.ww.gradle.buildSrc'
+    id 'com.ww.gradle.standardGradlePlugin'
+
 }
 
 apply plugin: BuildGradle

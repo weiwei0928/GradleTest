@@ -1,16 +1,24 @@
+import org.gradle.api.initialization.resolve.RepositoriesMode
+
 pluginManagement {
     repositories {
         gradlePluginPortal()
         google()
         mavenCentral()
+        mavenLocal()
+        maven {
+            url uri('repo')
+        }
     }
 }
 dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositoriesMode.set(RepositoriesMode.PREFER_PROJECT)
     repositories {
         google()
         mavenCentral()
+        mavenLocal()
     }
 }
-rootProject.name = "Test1"
+rootProject.name = "GradleTest"
 include ':app'
+include ':standard_gradle_puligin'

@@ -1,0 +1,1 @@
+/Users/weiwei/work/study/GradleTest/buildSrc/build/classes/kotlin/main/com/ww/gradle/BuildSrcGradlePlugin.class
